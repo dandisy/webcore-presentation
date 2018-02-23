@@ -1,0 +1,27 @@
+{
+    "name": "dandisy/webcore-presentation",
+    "description": "Laravel presentation system package for webcore platform",
+    "authors": [
+        {
+            "name": "dandi",
+            "email": "dandi@redbuzz.co.id"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "dandisy/webcore-frontpage": "dev-master",
+        "dandisy/webcore-component": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "Webcore\\Presentation\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Webcore\\Presentation\\PresentationServiceProvider"
+            ]
+        }
+    }
+}
