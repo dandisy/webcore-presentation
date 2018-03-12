@@ -3,12 +3,12 @@
 @section('content')
     <section class="content-header">
         <h1>
-            Presentation
+            Page
         </h1>
         {{--<h1 class="pull-left">
-            Presentation
+            Page
         </h1>
-        <div class="pull-right">
+        <div class="pull-right">            
             <!-- Version Field -->
             <div class="btn-group">
                 <button type="button" class="btn btn-default">Version</button>
@@ -42,19 +42,20 @@
             </div>
         </div>
         <div class="clearfix"></div>--}}
-   </section>
-   <div class="content">
-       @include('adminlte-templates::common.errors')
-       <div class="box box-primary">
-           <div class="box-body">
-               <div class="row">
-                   {!! Form::model($presentation, ['route' => ['presentations.update', $presentation->id], 'method' => 'patch']) !!}
+    </section>
+    <div class="content">
+        @include('adminlte-templates::common.errors')
+        <div class="box box-primary">
 
-                        @include('presentation::presentations.fields')
+            <div class="box-body">
+                <div class="row">
+                    {!! Form::open(['route' => 'admin.pages.store']) !!}
 
-                   {!! Form::close() !!}
-               </div>
-           </div>
-       </div>
-   </div>
+                        @include('admin.pages.fields')
+
+                    {!! Form::close() !!}
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection

@@ -16,10 +16,11 @@
             if(title === 'Action') {
                 $('.column-search').append('<td></td>');
             } else {
-                $('.column-search').append('<td><input type="text" placeholder="Search '+title+'" /></td>');
+                $('.column-search').append('<td><input type="text" placeholder="Search '+title+'" class="form-control" /></td>');
             }
         });
 
+		$("#dataTableBuilder_filter").remove();
         var table = $('#dataTableBuilder').DataTable();
 
         var idx = 0;

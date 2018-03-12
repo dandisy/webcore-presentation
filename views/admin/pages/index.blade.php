@@ -2,9 +2,9 @@
 
 @section('content')
     <section class="content-header">
-        <h1 class="pull-left">Presentations</h1>
+        <h1 class="pull-left">Pages</h1>
         <h1 class="pull-right">
-            <a class="btn btn-primary pull-right" style="margin-top: -10px;margin-bottom: 5px" href="{!! route('presentations.create') !!}">Add New</a>
+            <a class="btn btn-primary pull-right" style="margin-top: -10px;margin-bottom: 5px" href="{!! route('admin.pages.create') !!}">Add New</a>
             {{--<button type="button" class="btn btn-info pull-right" style="margin-top: -10px;margin-bottom: 5px;margin-right: 5px" data-toggle="modal" data-target="#myModal">
                 Import XLS
             </button>--}}
@@ -18,7 +18,7 @@
         <div class="clearfix"></div>
         <div class="box box-primary">
             <div class="box-body">
-                    @include('presentation::presentations.table')
+                    @include('admin.pages.table')
             </div>
         </div>
     </div>
@@ -26,7 +26,7 @@
     <!-- Modal -->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
-            <form class="modal-content" action="{!! url('importPresentation') !!}" method="post" enctype="multipart/form-data">
+            <form class="modal-content" action="{!! url('importPage') !!}" method="post" enctype="multipart/form-data">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                     <h4 class="modal-title" id="myModalLabel">Data Import</h4>
